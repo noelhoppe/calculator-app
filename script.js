@@ -11,17 +11,32 @@ function deleteLast() {
 function clearScreen() {
     resultArea.innerText = "";
 }
+function toggleThemes(n) {
+    if (n == 1)
+        html.setAttribute("data-theme", "normal");
+    else if (n == 2)
+        html.setAttribute("data-theme", "light");
+    else if (n == 3)
+        html.setAttribute("data-theme", "dark");
+}
 let resultArea;
 let calculate;
 let del;
 let res;
 let operation;
+let toggleTheme;
+let html;
 document.addEventListener("DOMContentLoaded", () => {
     resultArea = document.getElementById("resultArea");
     calculate = document.getElementById("calculate");
     del = document.getElementById("del");
     res = document.getElementById("res");
     operation = document.getElementsByTagName("button");
+    toggleTheme = document.getElementById("themeSwitcher");
+    html = document.getElementById("html");
+    toggleTheme.addEventListener("input", () => {
+        toggleThemes(Number(toggleTheme.value));
+    });
     del.addEventListener("click", () => {
         deleteLast();
     });

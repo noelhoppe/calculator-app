@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html id="html" lang="en" data-theme="normal">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,30 +9,32 @@
     <link rel="stylesheet" href="src/output.css">
     <script src="script.js" type="text/javascript"></script>
 </head>
-<body class="theme-1-bg-main font-sans    min-h-screen flex flex-col justify-center items-center gap-3 m-auto">
+<body class="font-sans    min-h-screen flex flex-col justify-center items-center gap-3 m-auto">
   <main class="max-w-80">
     <div>
-      <h1 class="text-white">Calculator</h1>
+      <h1>Calculator</h1>
+        <label for="themeSwitcher">Theme</label>
+        <input id="themeSwitcher" type="range" min="1" max="3" value="1">
     </div>
-    <div id="resultArea" class="theme-1-bg-screen text-white text-4xl   p-5 my-4 rounded h-16">
+    <div id="resultArea" class="text-white text-4xl   p-5 my-4 rounded h-16">
     </div>
-    <div class="theme-1-bg-keypad   text-4xl grid grid-cols-4 gap-3 p-3 rounded font-bold">
-        <button class="theme-1-text bg-white                        p-3 border-transparent rounded">7</button>
-        <button class="theme-1-text bg-white                        p-3 border-transparent rounded">8</button>
-        <button class="theme-1-text bg-white                        p-3 border-transparent rounded">9</button>
-        <button id="del" class="theme-1-key-del-res text-white      p-3 border-transparent rounded">DEL</button>
-        <button class="theme-1-text bg-white                        p-3 border-transparent rounded">4</button>
-        <button class="theme-1-text bg-white                        p-3 border-transparent rounded">5</button>
-        <button class="theme-1-text bg-white                        p-3 border-transparent rounded">6</button>
-        <button class="theme-1-text bg-white                        p-3 border-transparent rounded">+</button>
-        <button class="theme-1-text bg-white                        p-3 border-transparent rounded">1</button>
-        <button class="theme-1-text bg-white                        p-3 border-transparent rounded">2</button>
-        <button class="theme-1-text bg-white                        p-3 border-transparent rounded">3</button>
-        <button class="theme-1-text bg-white                        p-3 border-transparent rounded">-</button>
-        <button class="theme-1-text bg-white                        p-3 border-transparent rounded">.</button>
-        <button class="theme-1-text bg-white                        p-3 border-transparent rounded">0</button>
-        <button class="theme-1-text bg-white                        p-3 border-transparent rounded">/</button>
-        <button class="theme-1-text bg-white                        p-3 border-transparent rounded">*</button>
+    <div id="keypad" class="text-4xl grid grid-cols-4 gap-3 p-3 rounded font-bold">
+        <button class=" p-3 border-transparent rounded">7</button>
+        <button class="p-3 border-transparent rounded">8</button>
+        <button class="p-3 border-transparent rounded">9</button>
+        <button id="del" class="p-3 border-transparent rounded">DEL</button>
+        <button class="p-3 border-transparent rounded">4</button>
+        <button class="p-3 border-transparent rounded">5</button>
+        <button class="p-3 border-transparent rounded">6</button>
+        <button class="p-3 border-transparent rounded">+</button>
+        <button class="p-3 border-transparent rounded">1</button>
+        <button class="p-3 border-transparent rounded">2</button>
+        <button class="p-3 border-transparent rounded">3</button>
+        <button class="p-3 border-transparent rounded">-</button>
+        <button class="p-3 border-transparent rounded">.</button>
+        <button class="p-3 border-transparent rounded">0</button>
+        <button class="p-3 border-transparent rounded">/</button>
+        <button class="p-3 border-transparent rounded">*</button>
         <button id="res" class="theme-1-key-del-res text-white       col-span-2 p-3 border-transparent rounded">
             RESET
         </button>
